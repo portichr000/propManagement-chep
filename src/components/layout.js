@@ -8,6 +8,7 @@ class Layout extends Component {
         <Header/>
         <HeaderBar/>
         {this.props.children}
+        
       </div>
     )
   }
