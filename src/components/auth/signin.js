@@ -5,13 +5,13 @@ import * as actions from '../../actions';
 
 
 import SigninForm from './signinForm';
+import history from '../../history';
 
 class Signin extends Component {
   
   onSubmit = (fields) => {
     this.props.signIn(fields, () => {
-      this.props.history.push('/dashboard');
-      console.log('success');
+      history.push('/dashboard');
     })
   }
   
