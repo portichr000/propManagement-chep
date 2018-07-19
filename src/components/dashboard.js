@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import TabNav from './tabnav';
-import NewsletterGrid from './newsletter/newsletterContainer';
+import NewsletterGrid from './newsletter/newsletterGrid';
 
 class Dashboard extends Component {
 
