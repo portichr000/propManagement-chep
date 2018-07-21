@@ -6,6 +6,9 @@
     grid-template-rows: [s]258px [m] 405px [e];
     grid-template-columngs: [s] 1fr [e];
     
+    border: 1px solid $color-gray-E6;
+    border-radius: .5rem;
+    
     
     & > * {
         grid-column: s/e;
@@ -20,6 +23,11 @@
     
     &__title {
         grid-row: s/m;
+        color: white;
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 5rem;
+        text-align: center;
     } 
     
     &__image {
@@ -29,8 +37,10 @@
     
     &__body {
         grid-row: m/e;
-        &:p {
-            
+        p {
+            margin: 6.3rem 6.05rem;
+            line-height: 2.2rem;
+            font-size: 1.6rem;
         }
     }
 }
