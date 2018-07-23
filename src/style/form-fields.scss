@@ -60,6 +60,7 @@
 
 .form-button {
     &__button {
+        border: none;
         height: 4rem;
         width: 21.6rem;
         border-radius: 2rem;
@@ -71,4 +72,28 @@
         line-height: 2.8rem;
         text-align: center;
     }
+}
+
+.form-button-small {
+
+  &__button {
+    border-radius: 1.6rem;
+    border: 1px solid $color-gray-4D;
+    width: 13rem;
+    height: 2.4rem;
+    
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-align: center;
+    
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+  }
+  
+  &__danger {
+    border: none;
+    color: white; 
+    background-color: $color-red-BA;
+  }
 }
