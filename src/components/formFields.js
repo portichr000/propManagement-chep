@@ -41,7 +41,7 @@ export class FormTextArea extends Component {
 
 export class FormButton extends Component {
     render() {
-        const { className, title, input, type, small, danger } = this.props;
+        const { className, title, input, type, small, danger, onClick } = this.props;
         return (
             <div className={`${className} form-button ${small ? 'form-button-small' : 'form-button'}`}>
                 <button
@@ -50,7 +50,8 @@ export class FormButton extends Component {
                       ${danger ? 'form-button-small__danger' : ''}  
                     `}
                     type={type}
-                    {...input} 
+                    {...input}
+                    onClick={onClick}
                 >
                 {title}
                 </button>
