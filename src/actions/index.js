@@ -1,14 +1,18 @@
 import {
     signUp,
     signIn
-}from './auth';
+}
+from './auth';
 
 import {
-    fetchNewsletters
-}from './newsletter'
+    fetchNewsletters,
+    fetchNewsletterWithId
+}
+from './newsletter'
 
 export {
     signUp,
     signIn,
-    fetchNewsletters
+    fetchNewsletters,
+    fetchNewsletterWithId
 };

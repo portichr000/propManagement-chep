@@ -1,13 +1,16 @@
 import {
-    SET_NEWSLETTERS
-}from '../actions/types';
+    SET_NEWSLETTERS,
+    FETCH_NEWSLETTER_ID
+}
+from '../actions/types';
 
 
 const INITIAL_STATE = {
-    newsletters: []
+    newsletters: [],
+    newsletterToEdit: {}
 }
 
-export default function(state = INITIAL_STATE, action ) { 
+export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case SET_NEWSLETTERS:
             const newsletters = action.payload;
@@ -15,6 +18,19 @@ export default function(state = INITIAL_STATE, action ) {
                 ...state,
                 newsletters
             }
-        default: return state;
+        case FETCH_NEWSLETTER_ID:
+            const newsletterID = action.payload;
+            var newsletterToEdit = {};
+            state.newsletters.map(newsletter => {
+                if (newsletter._id == newsletterID) {
+                    newsletterToEdit = newsletter;
+                }
+            })
+            return {
+                ...state,
+                newsletterToEdit
+            }
+        default:
+            return state;
     }
 }
