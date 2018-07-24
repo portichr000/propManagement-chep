@@ -9,13 +9,13 @@ class NewNewsletter extends Component {
         //     //save new newsletter post request 
         //     console.log('trying to handle submit backend');
         // }
-        
+
         //this.props.history.push('./dashboard');
         this.props.history.push('/dashboard');
     }
-    
+
     onCancel = () => {
-       this.props.history.push('/dashboard');
+        this.props.history.push('/dashboard');
     }
 
     render() {
@@ -24,7 +24,7 @@ class NewNewsletter extends Component {
                 <NewNewsletterForm 
                 onCancel={() => this.onCancel()}
                 onSubmit={(event) => this.onSubmit(event)}
-                title='New Newsletter'
+                formTitle='New Newsletter'
             />
             </div>
         )
