@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 export class FormInput extends Component {
     render() {
-        const { className, title, input, type, placeholder } = this.props;
+        const { className, title, input, type, placeholder, editValue } = this.props;
         return (
             <div className={`${className} form-input`}>
                 <label className='form-input__title'>{title}</label>
@@ -11,7 +11,9 @@ export class FormInput extends Component {
                     className='form-input__input'
                     type={type}
                     {...input}
-                    placeholder={placeholder}    
+                    placeholder={placeholder}
+                    value={editValue ? editValue : input.value}
+                    
                 />
             </div>
         )
@@ -20,7 +22,7 @@ export class FormInput extends Component {
 
 export class FormTextArea extends Component {
     render() {
-        const { className, title, input, type, placeholder } = this.props;
+        const { className, title, input, type, placeholder, editValue } = this.props;
         return (
             <div className={`${className} form-textarea`}>
                 <label className='form-textarea__title'>{title}</label>
@@ -29,7 +31,7 @@ export class FormTextArea extends Component {
                     type={type}
                     {...input}
                     placeholder={placeholder} 
-                   
+                    value={editValue ? editValue : ''}
                 >
                 
                 </textarea>
@@ -61,14 +63,14 @@ export class FormButton extends Component {
 }
 
 export class FormImage extends Component {
-    
+
     handleSelectedImage = (event) => {
-        var image= document.getElementById('newsletter-new-image');
+        var image = document.getElementById('newsletter-new-image');
         image.src = URL.createObjectURL(event.target.files[0]);
     }
-    
+
     render() {
-        const { className, title, input, type,imageUrl } = this.props;
+        const { className, title, input, imageUrl } = this.props
         return (
             <div className={`${className} form-image`}>
                 <label className='form-image__title'>{title}</label>
@@ -100,4 +102,3 @@ export class FormImage extends Component {
         )
     }
 }
-
