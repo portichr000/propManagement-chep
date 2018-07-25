@@ -25,6 +25,7 @@ import Signup from './components/auth/signup';
 import Dashboard from './components/dashboard';
 import NewNewsletter from './components/newsletter/newsletterNew';
 import EditNewsletter from './components/newsletter/newsletterEdit';
+import NewsletterDetail from './components/newsletter/newsletterDetail';
 
 
 function main() {
@@ -40,11 +41,11 @@ function main() {
             <Route path='/dashboard' component={requireAuth(Dashboard)}/>
             <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/>
             <Route path='/newsletter/edit/:id' component={requireAuth(EditNewsletter)}/>
+            <Route path='/newsletter/detail/:id' component={requireAuth(NewsletterDetail)}/>
           </Layout>
         </Switch>
       </Router>
-    </Provider>
-    , document.querySelector('.app-wrapper'));
+    </Provider>, document.querySelector('.app-wrapper'));
 }
 
 document.addEventListener('DOMContentLoaded', main);
