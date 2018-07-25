@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
-import history from '../../history';
+import history from '../../history'
 
 function ArchiveItem({ title, date, _id, callback }) {
     return (
@@ -25,16 +25,15 @@ class NewsletterArchive extends Component {
             <div className='newsletter-archive'>
                 <div className='newsletter-archive__title'>Archive</div>
                 <div className='newsletter-archive__items archive-items'> 
-                    
                     {
                         this.props.newsletters.map(newsletter => {
                             return <ArchiveItem callback={(_id) => history.push(`/newsletter/detail/${_id}`)} key={newsletter._id} {...newsletter}/>
                         })
                     }
-                </div> <
-        /div>
-    )
-}
+                </div> 
+            </div>
+        )
+    }
 }
 
 function mapStateToProps(state) {
