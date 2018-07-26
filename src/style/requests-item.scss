@@ -1,47 +1,4 @@
 .requests-item {
-    
-    
-    &__icon {
-        font-size: 3rem;
-    }
-    &__title {
-        font-size: 1.8rem;
-        font-weight: 500;
-        line-height: 2.3rem;
-    }
-    &__tenant-unit {
-        color: $color-red-BA;
-        font-family: $font-encode-cond;
-        font-size: 1.3rem;
-        line-height: 1.6rem;
-    }
-    &__arrow {
-        color: $color-gray-4D;
-        font-size: 3rem;
-    }
-    &__date {
-        font-size: 1.4rem;
-        line-height: 1.7rem;
-    }
-    &__move {
-        
-    }
-    &__description {
-        
-    }
-    &__description-img {
-        
-    }
-    &__description-text {
-        font-size: 1.4rem;
-        line-height: 1.7rem;
-    }
-    
-    
-}
-
-
-.requests-item {
     display: grid;
     grid-template-rows: [s title-s] 34px [title-e tenant-s] 34px [tenant-e e];
     grid-template-columns: [icon-s] 100px [icon-e s title-s] minmax(40px, 1fr) [title-e arrow-s] 68px [arrow-e date-s] 100px [date-e e] 60px;
@@ -56,14 +13,14 @@
     &__title {
         grid-column: title-s/title-e;
         grid-row: title-s/title-e;
+        
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
     }
     &__tenant-unit {
         grid-column: title-s/title-e;
         grid-row: tenant-s/tenant-e;
-    }
-    &__arrow {
-        grid-column: arrow-s/arrow-e;
-        grid-row: title-s/title-;
     }
     &__date {
         grid-column: date-s/date-e;
@@ -84,4 +41,51 @@
         grid-auto-flow: column;
     }
  
+}
+
+
+.requests-item {
+    
+    &__icon {
+        font-size: 3rem;
+    }
+    &__title {
+        &__text {
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 2.3rem;
+            align-self: end;
+            margin-right: 2.5rem;
+        }
+        &__arrow {
+            color: $color-gray-4D;
+            font-size: 3rem;
+        }
+    }
+    &__tenant-unit {
+        color: $color-red-BA;
+        font-family: $font-encode-cond;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        align-self: start;
+    }
+    &__date {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+    &__move {
+        
+    }
+    &__description {
+        
+    }
+    &__description-img {
+        
+    }
+    &__description-text {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+    
+    
 }
