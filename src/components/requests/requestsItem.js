@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 
-import Button from '../button';
-
-import RequestsBoxes from './requestsBoxes';
-import Requests from './requests';
+import Icon from '../icon';
 
 class RequestsItem extends Component {
     
     render() {
         return (
             <div className='requests-item'>
-                itme goees here
+                <div>
+                    <Icon icon='fas fa-exclamation-triangle'/>
+                </div>
             </div>
         )
     }
