@@ -16,15 +16,18 @@ class RequestsItem extends Component {
     }
     
     toggleDropdown = () => {
+        var element = document.getElementById('requests-item');
         if(this.state.height==0) {
+            element.classList.add('bg-F8');
             this.setState({height: 'auto'})
         } else {
+            element.classList.remove('bg-F8');
             this.setState({height: 0})
         }
     }
     render() {
         return (
-            <div className='requests-item'>
+            <div id='requests-item'className='requests-item'>
                 <Icon className='requests-item__icon' icon='fas fa-exclamation-triangle'/>
                 <div className='requests-item__title'>
                     <div className='requests-item__title__text'>Yo my door broke </div>
@@ -37,19 +40,19 @@ class RequestsItem extends Component {
                 <div className='requests-item__date'>
                     09/15/97
                 </div>
-                <Button className='requests-item__move' icon='fas fa-wrench'callback={console.log('tryna change request item status') }/>
+                <Button className='requests-item__move' icon='fas fa-wrench' callback={() => console.log('tryna change request status')}/>
                 
                 <div className='requests-item__description'>
                     <AnimateHeight 
                         duration={300} 
                         height={this.state.height}
                     >
-                        <div className='requests-item__description'>
+                        <div className='item-description'>
                             <img 
-                                className='requests-item__description-img'
+                                className='item-description__img'
                                 src='http://via.placeholder.com/160x94'
                             />
-                            <p className='requests-item__description-text'>
+                            <p className='item-description__text'>
                                 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
                                 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
                                 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
