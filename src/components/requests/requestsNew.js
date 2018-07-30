@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import NewNewsletterForm from "../newsletter/newsletterNewForm";
 
-class NewRequest extends Component {
+class NewNewsletter extends Component {
 
     onSubmit = (fields) => {
         // if(button == 'submit') {
@@ -22,13 +22,13 @@ class NewRequest extends Component {
         return (
             <div className='new-request'>
                 <NewNewsletterForm 
-                onCancel={() => this.onCancel()}
-                onSubmit={(event) => this.onSubmit(event)}
-                formTitle='New Request'
-            />
+                    onCancel={() => this.onCancel()}
+                    onSubmit={(event) => this.onSubmit(event)}
+                    formTitle='New Newsletter'
+                />
             </div>
         )
     }
 }
 
-export default NewRequest;
+export default NewNewsletter;
