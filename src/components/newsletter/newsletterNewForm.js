@@ -9,6 +9,12 @@ class NewNewsletterForm extends Component {
 
     const { handleSubmit, formTitle, newsletterToEdit } = this.props
 
+    const{
+      fieldOnePlaceholder, fieldOneTitle,
+      fieldTwoPlaceholder, fieldTwoTitle
+    } = this.props;
+
+
     var title = null;
     var body = null;
     var imageUrl = null;
@@ -24,19 +30,19 @@ class NewNewsletterForm extends Component {
         <FormTitle className="new-newsletter-form__title" text={formTitle}/>
         <Field
           className="new-newsletter-form__newsletter-title"
-          placeholder="Newsletter Title"
+          placeholder={fieldOnePlaceholder}
           name="title"
           type="text"
-          title="Newsletter Title"
+          title={fieldOneTitle}
           component={FormInput}
           editValue={title ? title : null}
         />  
         <Field
           className="new-newsletter-form__body"
-          placeholder="Newsletter Body"
+          placeholder={fieldTwoPlaceholder}
           name="body"
           type="text"
-          title="Body"
+          title={fieldTwoTitle}
           component={FormTextArea}
           editValue={body ? body : null}
         />     
