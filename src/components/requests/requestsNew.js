@@ -14,7 +14,7 @@ class NewRequest extends Component {
         // }
 
         //this.props.history.push('./dashboard');
-        this.props.createNewRequest(this.props._id,{}, () => {
+        this.props.createNewRequest(this.props._id, fields, () => {
             this.props.history.push('/dashboard');
         })
     }
