@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import NewNewsletterForm from "../newsletter/newsletterNewForm";
 
-class NewRequest extends Component {
+class NewNewsletter extends Component {
 
     onSubmit = (fields) => {
         // if(button == 'submit') {
@@ -35,4 +35,4 @@ class NewRequest extends Component {
     }
 }
 
-export default NewRequest;
+export default NewNewsletter;

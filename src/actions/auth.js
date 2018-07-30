@@ -10,12 +10,12 @@ export function signUp(fields, success) {
     return function(dispatch) {
         axios.post(`${ROOT_URL}/signup`, fields)
             .then(response => {
-                    const { token } = response.data;
-                    window.localStorage.setItem('token', token);
                 dispatch({
                     type: AUTHENTICATE_USER,
                     payload: response.data
                 })
+                const { token } = response.data;
+                window.localStorage.setItem('token', token);
                 success();
             })
             .catch(err => {
