@@ -9,7 +9,7 @@ class RequestsBoxes extends Component {
         return (
             <div className='requests-boxes'>
                 <RequestsBox title={'pending'} count={this.props.pendingCount}/>
-                <RequestsBox title={'in-progress'} count={this.props.progressCount}/>
+                <RequestsBox title={'progress'} count={this.props.progressCount}/>
                 <RequestsBox title={'complete'} count={this.props.completeCount}/>
             </div>
         )
