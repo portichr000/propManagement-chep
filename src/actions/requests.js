@@ -33,3 +33,20 @@ export function createNewRequest(userId, formData, success) {
             })
     }
 } 
+
+export function fetchRequests() {
+    const token = window.localStorage.getItem('token');
+    return function() {
+        axios.get(`${ROOT_URL}/requests`, {
+            headers: { authorization: token}
+        })
+        
+            .then(response => {
+                console.log(response.data);
+                //dispatch action to set our requests
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+}
