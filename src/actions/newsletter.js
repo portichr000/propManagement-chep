@@ -31,10 +31,10 @@ export function fetchNewsletterWithId(id) {
     }
 }
 
-export function createNewNewsletter(userId, formData, success) {
+export function createNewNewsletter(formData, success) {
     const token = window.localStorage.getItem('token');
     return function() {
-        axios.post(`${ROOT_URL}/newsletters/new`, formData, {
+        axios.post(`${ROOT_URL}/newsletter/new`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
                 authorization: token
