@@ -6,7 +6,8 @@ from './auth';
 
 import {
     fetchNewsletters,
-    fetchNewsletterWithId
+    fetchNewsletterWithId,
+    createNewNewsletter
 } from './newsletter';
 
 import {
@@ -24,5 +25,6 @@ export {
     changeSelectedRequestType,
     createNewRequest,
     fetchRequests,
-    changeStatus
+    changeStatus,
+    createNewNewsletter
 };
