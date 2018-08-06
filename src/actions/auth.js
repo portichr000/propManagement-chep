@@ -7,6 +7,14 @@ import {
 }from './types';
 
 export function signUp(fields, success) {
+    // var newFields = {
+    //     admin: true
+    // }
+    // newFields = {
+    //     ...fields,
+    //     ...newFields
+    // }
+    
     return function(dispatch) {
         axios.post(`${ROOT_URL}/signup`, fields)
             .then(response => {
@@ -22,7 +30,7 @@ export function signUp(fields, success) {
                 if(err) {console.log(err)}
             })
         }
-}
+ }
 
 export function signIn(fields, success) {
     return function(dispatch) {
